@@ -42,8 +42,6 @@ Aplikasi ini merupakan implementasi **keranjang belanja sederhana** menggunakan 
 
 Aplikasi ini memungkinkan pengguna:
 - Melihat daftar produk (gambar, nama, harga)
-- Menambah/menghapus produk ke/dari keranjang
-- Mengupdate jumlah item (`+` / `-`)
 - Melihat ringkasan keranjang (total item & total harga)
 - Melakukan *checkout* (mengosongkan keranjang)
 
