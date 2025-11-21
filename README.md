@@ -74,5 +74,12 @@ Dikembangkan sesuai soal UTS dengan 3 bagian utama:
 | Gambar | Unsplash (publik, tanpa CORS) |
 | Tools | `build_runner`, `freezed_annotation`, `equatable` |
 
----
+--- 
+### Screenshot 
+<img width="1919" height="1079" alt="Screenshot 2025-11-21 152912" src="https://github.com/user-attachments/assets/5f9d07ed-20b5-4a43-9bb6-8ccb8daaf0af" />
+<img width="1727" height="1009" alt="Screenshot 2025-11-21 152927" src="https://github.com/user-attachments/assets/0bda45a9-1883-4e87-94c2-58c3b736a178" />
+<img width="1919" height="1079" alt="Screenshot 2025-11-21 152940" src="https://github.com/user-attachments/assets/2830f74b-3d3b-411f-8156-0c6d734e7655" />
+<img width="1919" height="1079" alt="Screenshot 2025-11-21 152956" src="https://github.com/user-attachments/assets/d1a372e8-0190-465c-b748-21bcfd5af1be" />
+<img width="1919" height="1079" alt="Screenshot 2025-11-21 153025" src="https://github.com/user-attachments/assets/be05046f-6372-483b-8e0a-149ac797f002" />
+
 ---
