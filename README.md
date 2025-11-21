@@ -18,7 +18,7 @@ Loaded State / Success State
 → Saat keranjang sudah berisi item, dan siap ditampilkan.
 
 
-✅ Struktur Proyek
+### ✅ Struktur Proyek
 lib/
 ├── models/
 │   └── product_model.dart
@@ -59,9 +59,8 @@ Dikembangkan sesuai soal UTS dengan 3 bagian utama:
 | 📦 Tampilan Daftar Produk | ✅ | Grid/list produk dengan gambar, nama, harga |
 | ➕➕ Tambah ke Keranjang | ✅ | Tombol "Beli", update otomatis di AppBar |
 | 🛒 Ringkasan Keranjang | ✅ | Halaman `/cart` dengan daftar item & total |
-| 🔁 Ubah Jumlah Item | ✅ *(Bonus)* | Tombol `+` dan `-` per item |
 | 🧹 Checkout | ✅ | Mengosongkan keranjang |
-| 📊 State Management | ✅ | Menggunakan `CartCubit` + `freezed` |
+| 📊 State Management | ✅ | Menggunakan `CartCubit` |
 | 🖼 Error Handling Gambar | ✅ | Fallback icon jika gambar gagal muat |
 
 ---
