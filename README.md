@@ -1,0 +1,81 @@
+Soal dan Jawaban Teori
+1. Jelaskan perbedaan antara Cubit dan Bloc dalam arsitektur Flutter?
+ Cubit itu lebih sederhana, cocok untuk state kecil, tidak ada event lalu langsung memanggil emit() terus cocok untuk UI state sederhana. sedangkan Bloc itu lebih kompleks, cocok untuk state besar, menggunakan event untuk trigger perubahan lalu dalam pemanggilannya Event-Bloc-State dan Cocok untuk bisnis logika kompleks.
+
+2.Mengapa penting untuk memisahkan antara model data, logika bisnis, dan UI dalam pengembangan aplikasi flutter? 
+Karena Model Data: Hanya menyimpan data (misal: ProductModel). Tidak tahu apa yang dilakukan dengan datanya.
+Logika Bisnis: Di dalam Cubit/Bloc — mengelola bagaimana data berubah (misal: menambahkan ke keranjang, menghitung total).
+UI: Hanya menampilkan data dan menerima input pengguna. Tidak boleh mengandung logika bisnis.
+
+3. Sebutkan dan jelaskan minimal tiga state yang mungkin digunakan dalam CartCubit beserta fungsi nya? 
+    Dalam CartCubit, minimal ada 3 state yang digunakan:
+
+Initial State / Empty State
+→ Saat keranjang kosong (cartItems = []).
+Loading State (Opsional tapi baik)
+→ Jika ada proses async (misal: fetch dari API), bisa tambahkan isLoading: true.
+Loaded State / Success State
+→ Saat keranjang sudah berisi item, dan siap ditampilkan.
+
+
+✅ Struktur Proyek
+lib/
+├── models/
+│   └── product_model.dart
+├── blocs/
+│   └── cart_cubit.dart
+├── widgets/
+│   └── product_card.dart
+├── pages/
+│   └── cart_summary_page.dart
+│   └── cart_grid_page.dart
+│   └── cart_home_page.dart
+│
+│
+└── main.dart
+
+
+
+## 📌 Deskripsi Proyek
+
+Aplikasi ini merupakan implementasi **keranjang belanja sederhana** menggunakan **Flutter** dan pola arsitektur **Bloc (Business Logic Component)**. Tujuannya adalah menunjukkan pemahaman terhadap konsep *state management*, *separation of concerns*, dan pengembangan aplikasi berbasis komponen.
+
+Aplikasi ini memungkinkan pengguna:
+- Melihat daftar produk (gambar, nama, harga)
+- Menambah/menghapus produk ke/dari keranjang
+- Mengupdate jumlah item (`+` / `-`)
+- Melihat ringkasan keranjang (total item & total harga)
+- Melakukan *checkout* (mengosongkan keranjang)
+
+Dikembangkan sesuai soal UTS dengan 3 bagian utama:
+- **A. Teori** — Konsep dasar Bloc dan desain arsitektur  
+- **B. Implementasi** — Model, Cubit, UI  
+- **C. Bonus** — Fitur peningkatan/penurunan jumlah item  
+
+## 🌟 Fitur Utama
+
+| Fitur | Status | Keterangan |
+|-------|--------|-------------|
+| 📦 Tampilan Daftar Produk | ✅ | Grid/list produk dengan gambar, nama, harga |
+| ➕➕ Tambah ke Keranjang | ✅ | Tombol "Beli", update otomatis di AppBar |
+| 🛒 Ringkasan Keranjang | ✅ | Halaman `/cart` dengan daftar item & total |
+| 🔁 Ubah Jumlah Item | ✅ *(Bonus)* | Tombol `+` dan `-` per item |
+| 🧹 Checkout | ✅ | Mengosongkan keranjang |
+| 📊 State Management | ✅ | Menggunakan `CartCubit` + `freezed` |
+| 🖼 Error Handling Gambar | ✅ | Fallback icon jika gambar gagal muat |
+
+---
+
+## 🛠 Teknologi yang Digunakan
+
+| Komponen | Teknologi |
+|---------|-----------|
+| Framework | Flutter 3.22+ (Dart 3.4+) |
+| State Management | `flutter_bloc` + `freezed` |
+| Arsitektur | **Layered Architecture**:<br> • Model (data)<br> • Bloc/Cubit (logika bisnis)<br> • UI (tampilan) |
+| Styling | Material 3 (Material Design 3) |
+| Gambar | Unsplash (publik, tanpa CORS) |
+| Tools | `build_runner`, `freezed_annotation`, `equatable` |
+
+---
+---
